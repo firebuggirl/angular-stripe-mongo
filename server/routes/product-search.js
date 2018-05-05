@@ -1,7 +1,8 @@
 const router = require('express').Router();
 require('dotenv').config({ path: '../variables.env' });
+
 const algoliasearch = require('algoliasearch');
-const client = algoliasearch(process.env.ANGOLIA_APP_ID, process.env.ANGOLIA_API_KEY);
+const client = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_API_KEY);
 const index = client.initIndex('angular-stripe-mongo');
 
 

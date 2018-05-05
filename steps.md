@@ -416,3 +416,32 @@
       - AWS S3 is known for it's static files storage. you don't want to store binary data files to MongoDB because it might slow down the query searches.
 
       - Whenever you think of storing images, videos, PDF and so on. Use S3.
+
+
+      ## Angular 6 + RxJS 6 Changes - Quick Fix
+
+        - ` npm install --save rxjs@6 `
+
+        - ` npm install --save rxjs-compat `
+
+        - ` npm install -g @angular/cli@latest `//global install
+
+        * Angular CLI V6 requires `Node V 8.9+` :
+
+            - ` nvm install node --version 8.9 `
+
+            - ` nvm use <node-version>`
+
+            - ` npm install @angular/cli@latest `
+
+            - ` ng update @angular/cli `//from within project directory
+
+                - new `angular.json` file is generated replacing the old `.angular-cli.json`
+
+            - now analyze existing project to check for outdated libraries:
+
+                - ` ng update `
+
+                - ` ng update @angular/core `
+
+            - delete `node_modules` + `package-lock.json` file in your project and re-run `npm install` if facing issues after updating

@@ -33,6 +33,12 @@ app.use('/api/accounts', userRoutes);
 app.use('/api/seller', sellerRoutes);
 app.use('/api/search', productSearchRoutes);
 
-app.listen(process.env.PORT, err => {
-  console.log('Magic happens on port awesome ' + process.env.PORT);
+// app.listen(process.env.PORT, err => {
+//   console.log('Magic happens on port awesome ' + process.env.PORT);
+// });
+
+app.set('port', process.env.PORT || 3030);
+//app.set('port', process.env.PORT || 4200);
+const server = app.listen(app.get('port'), () => {
+  console.log(`Express running → PORT ${server.address().port}`);
 });
