@@ -1,4 +1,5 @@
 const express = require('express');
+const helmet = require('helmet');//initiate security headers
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -33,9 +34,21 @@ app.use('/api/accounts', userRoutes);
 app.use('/api/seller', sellerRoutes);
 app.use('/api/search', productSearchRoutes);
 
-// app.listen(process.env.PORT, err => {
-//   console.log('Magic happens on port awesome ' + process.env.PORT);
-// });
+//app.use(helmet());//get security report here: https://securityheaders.io/
+app.use(helmet({
+  frameguard: {//disable X-Frame-Options which allow you to control whether the page can be loaded in a frame like <frame/> <iframe/> or <object/>
+    action: 'deny'
+  }
+}));
+app.use(helmet.referrerPolicy({ policy: 'same-origin' }));
+app.use(helmet.contentSecurityPolicy({//protect against malicious injection of JavaScript, CSS, plugins....
+  directives: {
+    defaultSrc: ["'self'"],
+    styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com']
+  }
+}));
+
+
 
 app.set('port', process.env.PORT || 3030);
 //app.set('port', process.env.PORT || 4200);

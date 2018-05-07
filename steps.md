@@ -445,3 +445,17 @@
                 - ` ng update @angular/core `
 
             - delete `node_modules` + `package-lock.json` file in your project and re-run `npm install` if facing issues after updating
+
+## Security
+
+  - Initiate security headers:
+
+      - ` npm i helmet --save `
+
+  - check security headers:
+
+      https://www.twilio.com/blog/2017/11/securing-your-express-app.html
+
+      - ` curl http://localhost:3030 --include `//--include prints out the HTTP headers of the response
+
+    
