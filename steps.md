@@ -1,23 +1,31 @@
 
 ## Create App
 
-  ` ng new angularStripeMongo --routing --style=scss `
+  ` ng new angularStripeMongo --routing --style=scss
+  `
 
-  ` npm i @ng-bootstrap/ng-bootstrap `
+  ` npm i @ng-bootstrap/ng-bootstrap
+  `
 
-  ` ng g component home `
+  ` ng g component home
+  `
 
-  ` ng g component message `
+  ` ng g component message
+  `
 
-  `  ng g service RestApi `
+  `  ng g service RestApi
+  `
 
-  ` ng g service DataService `
+  ` ng g service DataService
+  `
 
   - if error... specify main app.module via tag:
 
-    ` ng g c categories --module app `
+    ` ng g c categories --module app
+    `
 
-    ` ng g component PostProduct --module app `
+    ` ng g component PostProduct --module app
+    `
 
 
 
@@ -27,9 +35,11 @@
 
 * create POST request -> body ->  x-www-form-urlencoded
 
-  ` localhost:3030/api/accounts/signup `
+  ` localhost:3030/api/accounts/signup
+  `
 
-  ` localhost:3030/api/categories `
+  ` localhost:3030/api/categories
+  `
 
   ..etc...
 
@@ -42,13 +52,15 @@
 
   - name
 
-    ` localhost:3030/api/accounts/signup `
+    ` localhost:3030/api/accounts/signup
+    `
 
     .....
 
 ## JWT on the frontend, Local Storage
 
-  ` ng g component registration `
+  ` ng g component registration
+  `
 
 ## Add a product API Seller
 
@@ -137,13 +149,17 @@
 
     * Install dependencies
 
-      ` npm i aws-sdk --save `
+      ` npm i aws-sdk --save
+      `
 
-      ` npm i multer --save `
+      ` npm i multer --save
+      `
 
-      ` npm i multer-s3 --save `
+      ` npm i multer-s3 --save
+      `
 
-      ` npm i faker --save `
+      ` npm i faker --save
+      `
 
     * Faker.js
 
@@ -153,11 +169,13 @@
 ## Server Get products of specific category
 
   - in `routes/main.js`:
+
     - `router.get('/categories/:id', (req, res, next) => {`....
 
 ## Pagination
 
-  - ` npm i async --save `
+  - ` npm i async --save
+     `
 
   - in `routes/main.js`
 
@@ -181,7 +199,8 @@
 
 ## Front End Pagination
 
-   -   ` ng g component Category --module app `
+   -   ` ng g component Category --module app
+       `
 
    - import in `app-routing.module.ts`
 
@@ -192,13 +211,15 @@
 
 ## Create Category Component
 
-  - ` ng g component Category --module app `
+  - ` ng g component Category --module app
+  `
 
   - import in `app.routing.module.ts`
 
 ## Create Product Component
 
-  - ` ng g component Product --module app `
+  - ` ng g component Product --module app
+  `
 
   - import in `app.routing.module.ts`
 
@@ -418,7 +439,7 @@
       - Whenever you think of storing images, videos, PDF and so on. Use S3.
 
 
-      ## Angular 6 + RxJS 6 Changes - Quick Fix
+## Angular 6 + RxJS 6 Changes - Quick Fix
 
         - ` npm install --save rxjs@6 `
 
@@ -457,5 +478,3 @@
       https://www.twilio.com/blog/2017/11/securing-your-express-app.html
 
       - ` curl http://localhost:3030 --include `//--include prints out the HTTP headers of the response
-
-    

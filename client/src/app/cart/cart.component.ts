@@ -33,6 +33,7 @@ export class CartComponent implements OnInit {
 
   get cartTotal() {
     let total = 0;
+    //Object.keys(this.cartItems).forEach((data, index) => {
     this.cartItems.forEach((data, index) => {
       total += data['price'] * this.quantities[index];
     });
@@ -57,6 +58,7 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit() {//create array to store quantity/# of items
+    //Object.keys(this.cartItems).forEach(data => {
     this.cartItems.forEach(data => {
       this.quantities.push(1);
     });

@@ -10,7 +10,7 @@ require('dotenv').config({ path: './variables.env' });
 const app = express();
 
 // Only include useMongoClient only if your mongoose version is < 5.0.0
-
+//mongoose.connect(process.env.LOCAL_DB, {useMongoClient: true}, err => {
 mongoose.connect(process.env.DATABASE, {useMongoClient: true}, err => {
   if (err) {
     console.log(err);

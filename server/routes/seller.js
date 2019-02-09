@@ -67,9 +67,9 @@ router.route('/products')//find all products that belong to owner
 router.get('/faker/test',(req, res, next) => {
   for (i = 0; i < 20; i++) {
     let product = new Product();
-    product.category = '5aeba55cd924d01a5d579e6c';
-    product.owner = "5ae8d5fd3b993c328ee9299e";
-    product.image = faker.image.fashion();
+    product.category = '5be1f4a2731bfe3d8ed90357';
+    product.owner = '5be1eb829c50d73c9a336ccb';
+    product.image = faker.image.technics();
     product.title = faker.commerce.productName();
     product.description = faker.lorem.words();
     product.price = faker.commerce.price();
