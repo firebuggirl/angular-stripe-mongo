@@ -14,6 +14,7 @@ const app = express();
 mongoose.connect(process.env.DATABASE, {useMongoClient: true}, err => {
   if (err) {
     console.log(err);
+    console.log(err);
   } else {
     console.log('Connected to the database');
   }
