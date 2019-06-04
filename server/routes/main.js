@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const async = require('async');
-const stripe = require('stripe')('sk_test_QFXNWGiVgca8aJNySGcQWeUu');
+const stripe = require('stripe')(process.env.STRIPE_TEST_API_KEY);
 
 const Category = require('../models/category');
 const Product = require('../models/product');
