@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const User = require('../models/user');
+const Category = require('../models/category');
+const Review = require('../models/review');
 const deepPopulate = require('mongoose-deep-populate')(mongoose);
 //const mongooseAlgolia = require('mongoose-algolia');
 

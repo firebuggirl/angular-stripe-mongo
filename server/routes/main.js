@@ -121,7 +121,7 @@ router.get('/categories/:id', (req, res, next) => {
       Product.findById({ _id: req.params.id })
         .populate('category')
         .populate('owner')
-        .deepPopulate('reviews.owner')
+        .deepPopulate(['reviews.owner','owner','reviews.title', 'reviews.description'])
         .exec((err, product) => {
           if (err) {
             res.json({
@@ -133,7 +133,9 @@ router.get('/categories/:id', (req, res, next) => {
               res.json({
                 success: true,
                 product: product
+
               });
+              console.log(product);
             }
           }
         });
