@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "algoliasearch": "^3.27.0",
-    "async": "^2.6.0",
+    "async": "^2.6.4",
     "aws-sdk": "^2.449.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
