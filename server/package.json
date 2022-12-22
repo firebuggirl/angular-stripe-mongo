@@ -24,7 +24,7 @@
     "express": "^4.16.4",
     "faker": "^4.1.0",
     "helmet": "^3.21.2",
-    "jsonwebtoken": "^8.2.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.7.5",
     "mongoose-algolia": "^1.7.1",
     "mongoose-deep-populate": "^3.1.1",
